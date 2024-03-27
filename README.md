@@ -1,5 +1,7 @@
 # scripts-ubiquiti-binfile-extractor
 
+extract.py: script for extracting mtd partitions from UBNT File (File header).
+
 I used this to flash the stock firmware of my Ubiquity Unifi U6 LR.
 The recovery did not work but with openwrt still running I could flash the mtd partions of the stock firmware after extracting them with the script.
 SSH into openwrt.
@@ -17,5 +19,5 @@ mtd8: 00080000 00010000 "mutil-log"
 mtd9: 00040000 00010000 "oops"
 mtd10: 00010000 00010000 "radio"
 
-mtd write <part>.mtd /dev/mtd<use from list>
+mtd write <part>.bin /dev/mtd<use from list>
 ```
